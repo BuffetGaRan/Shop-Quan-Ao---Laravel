@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hidden__tab{
+    width: 100%;
+    height: 100vh;
+    background: rgba(53, 59, 72, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 10;
+    visibility: hidden; 
+}
+
+.hidden__tab #form-create-product{
+    box-shadow: 0 5px 10px;
+    width: 40%;
+    margin: auto;
+    padding: 2vw;
+    background: #dcdde1;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden; 
+}
+
+.hidden__tab #form-create-product .title{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 1vw; 
+}
+
+.hidden__tab #form-create-product .item label{
+    color: black;
+    font-weight: bold;
+    line-height: 5px;
+    margin-top: 1.5vw; 
+}
+
+.hidden__tab #form-create-product .item input{
+    width: 100%; 
+}
+
+.hidden__tab #form-create-product .item textarea{
+    width: 100%; 
+}
+
+.hidden__tab #form-create-product .name{
+    padding-top: 1vw; 
+}
+
+.hidden__tab #form-create-product .type{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.hidden__tab #form-create-product .type label{
+    margin-top: 1vw;
+    padding-top: .55vw; 
+}
+
+.hidden__tab #form-create-product .type select{
+    width: 5vw;
+    padding-left: .5vw; 
+}
+
+.hidden__tab #form-create-product #btn-create-product{
+    margin-top: 2vw; 
+}
+
+
+.hidden__tab #form-update-product{
+    box-shadow: 0 5px 10px;
+    width: 40%;
+    margin: auto;
+    padding: 2vw;
+    background: #dcdde1;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden; 
+}
+
+.hidden__tab #form-update-product .title{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 1vw; 
+}
+
+.hidden__tab #form-update-product .item label{
+    color: black;
+    font-weight: bold;
+    line-height: 5px;
+    margin-top: 1.5vw; 
+}
+
+.hidden__tab #form-update-product .item input{
+    width: 100%; 
+}
+
+.hidden__tab #form-update-product .item textarea{
+    width: 100%; 
+}
+
+.hidden__tab #form-update-product .name{
+    padding-top: 1vw; 
+}
+
+.hidden__tab #form-update-product .type{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.hidden__tab #form-update-product .type label{
+    margin-top: 1vw;
+    padding-top: .55vw; 
+}
+
+.hidden__tab #form-update-product .type select{
+    width: 5vw;
+    padding-left: .5vw; 
+}
+
+.hidden__tab #form-update-product #btn-update-product{
+    margin-top: 2vw; 
+}
+
+.table__product .add__product{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    display: flex;
+    height: 100%;
+    align-items: center; 
+}
+
+.table__product .add__product .search{
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    width: 20vw;
+    position: relative; 
+}
+
+.table__product .add__product .search .txt__search{
+    height: 100%;
+    width: 2.5vw;
+    border: none;
+    outline: none;
+    border-radius: 1.3vw;
+    cursor: default;
+    transition: 1s;
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+    padding-left: 1vw;
+    font-size: 1vw;
+    font-weight: bold; 
+}
+
+.table__product .add__product .search .txt__search:focus::placeholder{
+    color: transparent; 
+}
+
+.table__product .add__product .search .txt__search__edit{
+    width: 20vw;
+    transition: 1s;
+    opacity: 1;
+    position: absolute; 
+}
+
+.table__product .add__product .search .btn__search{
+    height: 100%;
+    width: 2.5vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2vw;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    opacity: .4;
+    background: transparent;
+    transition: 1s; 
+}
+
+.table__product .add__product .search .btn__search i{
+    cursor: pointer; 
+}
+
+.table__product .add__product .search .btn__search .btn__search:hover{
+    box-shadow: 0 0 10px black; 
+}
+
+.table__product .add__product .search .btn__search__edit{
+    opacity: 1;
+    transition: 1s;
+    color: black;
+    background: white;
+    box-shadow: 0 0 10px black; 
+}
+
+.table__product .add__product #btn__add__product{
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    opacity: .4;
+    border-radius: 10px;
+    background: transparent;
+    transition: 1s;
+    padding: 5px 10px;
+    box-shadow: 0 0 2px black; 
+}
+
+.table__product .add__product #btn__add__product:hover{
+    opacity: 1;
+    transition: 1s;
+    box-shadow: 0 2px 7px black; 
+}
+
+.table__product .table-responsive{
+    height: 80vh;
+    overflow-x: auto; 
+}
+
+.table__product .table-responsive .table .tr{
+    position: relative;
+    /*background: red;*/ 
+}
+
+.table__product .table-responsive .table .desc{
+    width: 200px;
+    height: 100px;
+    overflow-x: auto; 
+}
+
+.table__product .table-responsive .table .tr .action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.table__product .table-responsive .table .tr .action button{
+    width: 45px;
+    border: 1px solid black;
+}
+
+.card-icon{
+    cursor: pointer;
+}
+
+.btn__ship{
+    padding: 3px 10px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.btn__ship a{
+    color: black;
+}

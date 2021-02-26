@@ -1,0 +1,10 @@
+import ('./Js/css.js');
+import ('./Js/admin.js');
+import ('./Js/detail.js');
+import ('./Js/product.js');
+import ('./Js/popper.min.js');
+import ('./Js/zoom-image.js');
+import ('./Js/bootstrap-material-design.min.js');
+import ('./Js/material-dashboard.js');
+import ('./Js/slick.js');
+import ('./Js/slick.min.js');

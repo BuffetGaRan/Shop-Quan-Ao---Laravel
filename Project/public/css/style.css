@@ -1,0 +1,971 @@
+@charset "UTF-8";
+body{
+    background: #dcdde1;
+}
+
+body img{
+    width: 100%;
+}
+
+body hr{
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+}
+
+body .header{
+    background: rgba(149, 175, 192, 0);
+    align-items: center;
+    left: 0;
+    right: 0;
+    position: fixed;
+    color: black;
+    padding: 2vh 0;
+    z-index: 10;
+    transition: 1s;
+}
+
+body .header .menu{
+    display: flex;
+    justify-content: flex-start;
+}
+
+body .header .menu i{
+    margin-left: 2vw;
+    font-size: 4vh;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.header .fa-tshirt{
+    visibility: hidden;
+}
+
+body .header .menu__hidden{
+    position: absolute;
+    background: tomato;
+    top: 0;
+    left: -100vw;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    transition: .7s;
+    transform: scale(0, 0);
+}
+
+body .header .menu__hidden .menu__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: grey;
+}
+
+body .header .menu__hidden .menu__text .close{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    cursor: pointer;
+}
+
+body .header .menu__hidden .menu__text li a{
+    line-height: 10vh;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+body .header .menu__hidden .menu__text li a:hover{
+    text-decoration: underline;
+}
+
+body .header .menu__hidden .menu__hightlight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: blue;
+    padding: 0;
+}
+
+body .header .menu__hidden .menu__hightlight div{
+    width: 100%;
+    height: calc(100%/3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vh;
+    font-weight: bold;
+}
+
+body .header .menu__hidden a{
+    color: white;
+    text-decoration: none;
+}
+
+body .header .menu__hidden .menu__hightlight .menu__hightlight__hot{
+    background: url("/img/banner_2.jpg");
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+body .header .menu__hidden .menu__hightlight .menu__hightlight__sale{
+    background: url("/img/young-teen-woman-sunglasses-hat-holding-shopping-bags-her-hands-feeling-so-happiness-isolated-green-wall.jpg");
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+body .header .menu__hidden .menu__hightlight .menu__hightlight__quality{
+    background: url("/img/dami-adebayo-k6aQzmIbR1s-unsplash.jpg");
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+body .header .menu__hidden .menu__consult{
+    background: url("/img/pretty-young-stylish-sexy-woman-pink-luxury-dress-summer-fashion-trend-chic-style-sunglasses-blue-studio-background-shopping-holding-paper-bags-talking-mobile-phone-shopaholic.jpg");
+    background-size: cover;
+    filter: grayscale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+body .header .menu__hidden li{
+    list-style-type: none;
+}
+
+body .header .menu__hidden__edit{
+    transform: scale(1, 1);
+    transition: .7s;
+    left: 0;
+}
+
+body .header .logo .fa-tshirt{
+    font-size: 10vh;
+    transition: 1s;
+}
+
+body .header .info{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info .cart{
+    position: relative;
+    cursor: pointer;
+}
+
+body .header .info div{
+    margin: 0 .2vw;
+    font-size: 3vh;
+    width: 4vw;
+    height: 5vh;
+    border: 2px solid black;
+    transition: 1s;
+}
+
+body .header .info .user{
+    cursor: pointer;
+    margin-right: 2vw;
+    transition: 1s;
+}
+
+body .header__edit{
+    background: #dcdde1;
+    box-shadow: 0 0 5px;
+    transition: 1s;
+}
+
+body .header__edit .menu{
+    display: flex;
+    justify-content: flex-start;
+}
+
+body .header__edit .menu i{
+    margin-left: 2vw;
+    font-size: 3vh;
+    color: black;
+    transition: 1s;
+}
+
+body .header__edit .logo .fa-tshirt{
+    font-size: 5vh;
+    transition: 1s;
+    visibility: visible;
+}
+
+body .header__edit .info{
+    display: flex;
+    justify-content: flex-end;
+}
+
+body .header__edit .info div{
+    margin: 0 .2vw;
+    font-size: 2vh;
+    width: 3vw;
+    height: 4vh;
+    padding: .3vh 0;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+body .header__edit .info .user{
+    margin-right: 2vw;
+    transition: 1s;
+}
+
+body .content .content__top{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body .content .content__top .content__top__item{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+body .content .content__top .content__top__item p{
+    font-size: 6.5vw;
+    font-weight: bold;
+    color: rgba(223, 249, 251, 0.7);
+}
+
+body .content .content__top .content__top__item button{
+    border: none;
+    background: rgba(0, 0, 0, 0.7);
+    outline: none;
+    width: 16vw;
+    height: 8vh;
+}
+
+body .content .content__top .content__top__item button a{
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body .content .content__body{
+    background: white;
+    box-shadow: 0 1px 2px;
+    margin-top: 1vw;
+}
+
+body .content .content__body .btn__left__right{
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0 2px;
+    background: pink;
+    outline: none;
+    width: 3vw;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+
+body .content .content__body .btn__left__right:first-child{
+    border-radius: 15px 0 0 15px;
+    margin-left: 1vw;
+}
+
+body .content .content__body .title__body{
+    padding-top: 10vh;
+}
+
+body .content .content__body .title__body .title__body__header{
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+body .content .content__body .title__body .title__body__desc{
+    margin-top: -1.5vh;
+    font-size: 2.3vh;
+    color: grey;
+}
+
+body .content .content__body .sale{
+    padding: 0 30px;
+}
+
+body .content .content__body .sale .slider{
+    padding: 0;
+    overflow: hidden;
+}
+
+body .content .content__body .sale .slider img{
+    width: 120%;
+}
+body .content .content__body .sale .banner{
+    padding: 0 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body .content .content__body .sale .banner .banner__up{
+    background: blue;
+}
+
+body .content .content__body .sale .banner .banner__down {
+    background: blue;
+}
+body .content .content__body .brand{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+    padding: 10vh 0;
+}
+
+body .content .content__body .brand img {
+    width: 90%;
+}
+
+body .content .content__body .gender{
+    margin-top: 5vh;
+}
+
+body .content .content__body .gender div{
+    height: 700px;
+    padding: 0;
+    overflow: hidden;
+}
+
+body .content .content__body .gender img{
+    filter: grayscale(100%);
+}
+
+body .content .content__body .gender .gender__men{
+    background: black;
+}
+
+body .content .content__body .gender .gender__men img{
+    width: 125%;
+    transition: .5s;
+}
+
+body .content .content__body .gender .gender__men .gender__men__hidden{
+    position: absolute;
+    width: 30vw;
+    height: 22.4vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    overflow: hidden;
+}
+
+body .content .content__body .gender .gender__men .gender__men__hidden::after{
+    content: 'MEN';
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 15vh;
+    font-weight: bold;
+    color: white;
+    transition: .5s;
+}
+
+body .content .content__body .gender .gender__men:hover .gender__men__hidden::after{
+    top: 0px;
+    transition: .5s;
+}
+
+body .content .content__body .gender .gender__men:hover img{
+    opacity: .3;
+    transition: .3s;
+}
+
+body .content .content__body .gender .gender__women{
+    background: black; 
+}
+
+body .content .content__body .gender .gender__women img{
+    margin-top: -100px;
+    transition: .5s;
+}
+
+body .content .content__body .gender .gender__women .gender__women__hidden{
+    position: absolute;
+    width: 30vw;
+    height: 22.4vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    overflow: hidden; 
+}
+
+body .content .content__body .gender .gender__women .gender__women__hidden::after{
+    content: 'WOMEN';
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 15vh;
+    font-weight: bold;
+    color: white;
+    transition: .5s;
+}
+
+body .content .content__body .gender .gender__women:hover .gender__women__hidden::after{
+    top: 0px;
+    transition: .5s; 
+}
+
+body .content .content__body .gender .gender__women:hover img{
+    opacity: .3;
+    transition: .3s; 
+}
+
+body .content .content__body .title__hot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+body .content .content__body .title__hot .txt__title__hot{
+    margin: auto;
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+body .content .content__body .fashion__hot{
+    padding: 0;
+    margin: 0;
+}
+
+body .content .content__body .fashion__hot .col-3{
+    padding: 0 5px; 
+}
+
+body .content .content__body .fashion__hot .col-3:hover .card__hot__title__name{
+    margin-top: -4.2vh;
+    transition: .3s;
+}
+
+body .content .content__body .fashion__hot .col-3:hover .card__hot__image img{
+    transform: scale(0.95, 0.95);
+    transition: .2s; 
+}
+
+.number__cart{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .content .content__body .fashion__hot .col-3:hover .item__cart {
+    transform: translateY(0);
+    transition: .3s; 
+}
+
+body .content .content__body .fashion__hot .card__hot{
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+    box-shadow: 0 0 5px;
+    border-radius: 5px;
+    border: 2px solid white; 
+}
+
+body .content .content__body .fashion__hot .card__hot .card__hot__image{
+    height: 300px; 
+}
+
+body .content .content__body .fashion__hot .card__hot .card__hot__image img{
+    /*margin-top: -100px;*/
+    transition: .3s; 
+}
+
+body .content .content__body .fashion__hot .card__hot .card__hot__title{
+    position: absolute;
+    bottom: 0;
+    height: 4.7vh;
+    width: 100%;
+    background: rgba(53, 59, 72, .5);
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+body .content .content__body .fashion__hot .card__hot .card__hot__title .card__hot__title__name{
+    font-size: 3vh;
+    transition: .3s; 
+}
+
+body .content .content__body .fashion__hot .card__hot .card__hot__title .card__hot__title__price{
+    font-size: 2.5vh; 
+}
+
+body .content .content__body .fashion__hot .card__hot .item__cart{
+    position: absolute;
+    top: .5vh;
+    right: .25vw;
+    width: 2vw;
+    height: 4vh;
+    background: #7f8fa6;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    transition: .3s;
+    transform: translateY(-5vh); 
+}
+
+body .content .content__body .fashion__hot .card__hot .item__cart:hover{
+    transform: scale(1.1, 1.1);
+}
+
+body .content .content__body .album{
+    margin-top: 5vh;
+}
+
+body .content .content__body .album .col-3{
+    border: .1px solid white;
+    transition: .5s;
+    padding: 0; 
+}
+
+body .content .content__body .album .col-3:hover{
+    box-shadow: 0 0 5px black;
+    transition: .5s;
+}
+
+body .content .content__body .album .title_album{
+    font-size: 6vh;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px;
+    padding: 5vh 0; 
+}
+
+body .content .content__body .tab__product{
+    margin-top: 5vh;
+    padding-bottom: 5vh; 
+}
+
+body .content .content__body .tab__product .nav-item a{
+    border: none; 
+}
+
+body .content .content__body .tab__product .tab-pane .col-2:hover .card__tab__title__name{
+    margin-top: -3.8vh;
+    transition: .3s; 
+}
+
+body .content .content__body .tab__product .tab-pane .col-2:hover .card__tab__image img{
+    transform: scale(0.95, 0.95);
+    transition: .3s; 
+}
+
+body .content .content__body .tab__product .tab-pane .col-2:hover .item__cart{
+    transform: translateY(0);
+    transition: .3s; 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab{
+    overflow: hidden;
+    height: 29.5vh;
+    position: relative;
+    box-shadow: 0 0 5px;
+    border-radius: 5px;
+    border: 2px solid white; 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .card__tab__image{
+    /*height: 300px;*/ 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .card__tab__image img{
+    /*margin-top: -100px;*/
+    transition: .3s; 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .card__tab__title{
+    position: absolute;
+    bottom: 0;
+    height: 3.8vh;
+    width: 100%;
+    background: rgba(53, 59, 72, .5);
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .card__tab__title .card__tab__title__name{
+    font-size: 2.5vh;
+    transition: .3s; 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .card__tab__title .card__tab__title__price{
+    font-size: 2vh; 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .item__cart{
+    position: absolute;
+    top: .2vh;
+    right: .1vw;
+    width: 1.7vw;
+    height: 3.4vh;
+    background: #7f8fa6;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    transition: .3s;
+    transform: translateY(-4vh); 
+}
+
+body .content .content__body .tab__product .tab-pane .card__tab .item__cart:hover{
+    transform: scale(1.1, 1.1);
+}
+
+body .content .content__footer{
+    margin-top: 15vh;
+    height: 65vh; 
+}
+
+body .content .content__footer .title__content__footer{
+    font-size: 4vw;
+    text-transform: uppercase; 
+}
+
+body .content .content__footer .commitment{
+    margin-top: 10vh; 
+}
+
+body .content .content__footer .commitment .title__commitment{
+    margin: 2.5vh 0;
+    font-size: 2.2vh;
+    text-transform: uppercase;
+    font-weight: 630;
+    letter-spacing: 2px; 
+}
+
+body .content .content__footer .commitment .txt__commitment{
+    font-size: 2vh;
+    letter-spacing: 3px;
+    font-weight: 550;
+    color: grey; 
+}
+
+body .content .content__footer .commitment img{
+    height: 52px;
+    width: 52px; 
+}
+
+body .content .content__footer .commitment .commitment__2 img{
+    width: 107.33px; 
+}
+
+body .footer {
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 5vh; 
+}
+
+body .footer .footer__email{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+body .footer .footer__email .title__email{
+    font-size: 2vw;
+    position: relative;
+    margin-top: 5vh; 
+}
+
+body .footer .footer__email .title__email::after{
+    content: 'SUBSCRIBE';
+    position: absolute;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: pink;
+    font-weight: bold;
+    font-size: 25vh;
+    opacity: .3; 
+}
+
+body .footer .footer__email .form__email{
+    margin: 5vh 0;
+    height: 6.5vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1; 
+}
+
+body .footer .footer__email .form__email #inputEmail{
+    outline: none;
+    width: 30vw;
+    font-size: 2vh;
+    border: 1px solid black;
+    padding-left: 1vw;
+    letter-spacing: .2vw; 
+}
+
+body .footer .footer__email .form__email #btnEmail{
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    width: 8vw;
+    font-size: 2.5vh;
+    letter-spacing: .3vw; 
+}
+
+body .footer .footer__email .follow{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+body .footer .footer__email .follow ul{
+    display: flex;
+    padding: 0;
+    margin-top: 2vh; 
+}
+
+body .footer .footer__email .follow ul li{
+    list-style-type: none;
+    font-size: 1.2vw;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .5vh;
+    color: white; 
+}
+
+body .footer .footer__email .follow ul #messenger{
+    background: blue; 
+}
+
+body .footer .footer__email .follow ul #twitter{
+    background: pink; 
+}
+
+body .footer .footer__email .follow ul #googlePlus{
+    background: green; 
+}
+
+body .footer .footer__email .follow ul #instagram{
+    background: grey; 
+}
+
+body .footer .footer__email .follow ul #youtube{
+    background: red; 
+}
+
+body .footer .footer__email .follow ul #facebook{
+    background: blue; 
+}
+
+body .footer .footer__bottom .form__footer__bottom{
+    margin-top: 7vh; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom .title__bottom{
+    font-size: 1.7vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 3vh; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom ul{
+    padding: 0;
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom ul li{
+    list-style-type: none;
+    line-height: 5.5vh; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom__address li{
+    display: flex;
+    margin-top: 1.5vh;
+    align-items: center; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom__address li i{
+    width: 4vh;
+    height: 4vh;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+    margin-right: 1vw;
+    color: white;
+    background: grey; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom__address li:first-child i{
+    background: red; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom__address li:last-child div{
+    line-height: 2.5vh; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom__address li:last-child i{
+    background: blue; 
+}
+
+body .footer .footer__bottom .form__footer__bottom .item__bottom__address li:last-child .phone{
+    font-size: 1.8vh;
+    font-weight: bold; 
+}
+
+body .bottom .bottom__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh; 
+}
+
+body .bottom .bottom__content .bottom__content__title{
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+body .bottom .bottom__content .credit__item{
+    font-size: 3.5vh; 
+}
+
+#change-image form{
+    display: flex;
+    flex-direction: column;
+}
+
+#change-image form label{
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+#change-image form button{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#myModal .modal-footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#modal-login label{
+    font-weight: bold;
+    display: block;
+    line-height: 10px;
+}
+
+#modal-login .form__login{
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-login form input{
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#modal-login .modal-body a{
+    color: #9c88ff;
+}
+
+#modal-login .modal-body a:last-child{
+    color: #9c88ff;
+    cursor: pointer;
+}
+
+#modal-login .modal-body a:hover{
+    text-decoration: underline;
+}
+
+#modal-register label{
+    display: block;
+    line-height: 10px;
+    font-weight: bold;
+}
+
+#modal-register .form__login{
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-register form input{
+    margin-bottom: 10px;
+}
+
+#modal-register .modal-body a{
+    color: #9c88ff;
+    cursor: pointer;
+}
+
+#modal-register .modal-body a:hover{
+    text-decoration: underline;
+}
+
+.user__item{
+    position: absolute;
+    padding: 10px 15px;
+    top: 2.6vw;
+    right: -3vw;
+    text-align: left;
+    background: #dcdde1;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.user__item__edit{
+    right: 3vw;
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.user__item li{
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.login__error{
+    font-size: 15px;
+    position: absolute;
+    left: 16px;
+    color: red;
+}
